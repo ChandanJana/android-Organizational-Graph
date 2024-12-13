@@ -1,0 +1,70 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.5.30"
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10'
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7")
+        classpath 'com.google.gms:google-services:4.4.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+
+    }
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}
+
+
+ext.deps = [:]
+def versions = [:]
+versions.lifecycle = "1.1.1"
+versions.roomVersion = "2.3.0"
+versions.support = "28.0.0"
+versions.supportLibraryVersion = "28.0.0"
+versions.kotlin = "1.2.20"
+versions.navigation = '2.7.7'
+versions.min_sdk = 21
+versions.target_sdk = 29
+versions.constraint_layout = "1.1.3"
+versions.glide = "4.3.1"
+versions.circleView = "2.2.0"
+versions.recyclerView = "26.1.0"
+versions.map = "16.1.0"
+versions.retrofitVersion = "2.9.0"
+versions.okhttpVersion = "5.0.0-alpha.2"
+versions.timberVersion = "4.6.1"
+versions.daggerVersion = "2.20"
+versions.map = "16.0.0"
+versions.gson = "2.10.1"
+versions.sdp = "1.1.1"
+versions.ssp = "1.1.1"
+versions.gif = "1.2.16"
+versions.chart = "v2.2.4"
+
+versions.glide = "4.3.1"
+versions.appcompat = "1.3.1"
+versions.corektx = "1.13.1"
+versions.legacysupport = "1.0.0"
+versions.material = "1.4.0"
+versions.junit = "4.13.2"
+versions.constraintlayout = "2.1.2"
+versions.testrunner = "1.6.1"
+versions.espressocore = "3.6.1"
+versions.multidex = "1.0.3"
+ext.versions = versions
